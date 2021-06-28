@@ -109,6 +109,10 @@ module.exports = function(grunt) {
                 src: '<%= paths.css %>bootstrap4-rte.css',
                 dest: '<%= paths.css %>bootstrap4-rte.min.css'
             },
+            bootstrap5_theme: {
+                src: '<%= paths.css %>bootstrap5-theme.css',
+                dest: '<%= paths.css %>bootstrap5-theme.min.css'
+            },
             bootstrappackageicon: {
                 src: '<%= paths.fonts %>bootstrappackageicon.css',
                 dest: '<%= paths.fonts %>bootstrappackageicon.min.css'
@@ -181,6 +185,7 @@ module.exports = function(grunt) {
             contrib: {
                 files: {
                     '<%= paths.contrib %>bootstrap4/js/bootstrap.min.js': '<%= paths.contrib %>bootstrap4/js/bootstrap.min.js',
+                    '<%= paths.contrib %>bootstrap5/js/bootstrap.min.js': '<%= paths.contrib %>bootstrap5/js/bootstrap.min.js',
                     '<%= paths.contrib %>popper/popper.min.js': '<%= paths.contrib %>popper/popper.min.js'
                 }
             }
@@ -201,7 +206,12 @@ module.exports = function(grunt) {
                 files: {
                     '<%= paths.css %>bootstrap4-rte.css': '<%= paths.sass %>RTE/rte.scss'
                 }
-            }
+            },
+            bootstrap5_theme: {
+                files: {
+                    '<%= paths.css %>bootstrap5-theme.css': '<%= paths.sass %>bootstrap5/theme.scss'
+                }
+            },
         },
         watch: {
             bootstrapForm: {
@@ -351,7 +361,7 @@ module.exports = function(grunt) {
             bootstrap4: {
                 files: [
                     {
-                        cwd: '<%= paths.node %>bootstrap/dist/js/',
+                        cwd: '<%= paths.node %>bootstrap4/dist/js/',
                         src: [
                             'bootstrap.min.js'
                         ],
@@ -359,9 +369,27 @@ module.exports = function(grunt) {
                         expand: true
                     },
                     {
-                        cwd: '<%= paths.node %>bootstrap/scss/',
+                        cwd: '<%= paths.node %>bootstrap4/scss/',
                         src: '**',
                         dest: '<%= paths.contrib %>bootstrap4/scss/',
+                        expand: true
+                    }
+                ]
+            },
+            bootstrap5: {
+                files: [
+                    {
+                        cwd: '<%= paths.node %>bootstrap5/dist/js/',
+                        src: [
+                            'bootstrap.min.js'
+                        ],
+                        dest: '<%= paths.contrib %>bootstrap5/js/',
+                        expand: true
+                    },
+                    {
+                        cwd: '<%= paths.node %>bootstrap5/scss/',
+                        src: '**',
+                        dest: '<%= paths.contrib %>bootstrap5/scss/',
                         expand: true
                     }
                 ]

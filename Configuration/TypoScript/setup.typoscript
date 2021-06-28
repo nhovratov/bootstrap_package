@@ -24,7 +24,7 @@
 ###################
 #### FRAMEWORK ####
 ###################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Bootstrap4/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/Bootstrap5/setup.typoscript">
 
 
 ####################################

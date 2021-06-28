@@ -1,0 +1,10 @@
+//
+// Compat for Bootstrap 5
+//
+.visually-hidden {
+    @extend .sr-only;
+}
+.visually-hidden-focusable {
+    @extend .sr-only;
+    @extend .sr-only-focusable;
+}

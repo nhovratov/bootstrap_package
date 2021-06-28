@@ -1,0 +1,28 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Files
+//
+@import "../../Contrib/bootstrap5/scss/bootstrap";
+
+//
+// Components
+//
+@import "../components/backendlayout";
+@import "../components/section";
+@import "../components/frame";
+@import "../components/footer";
+@import "../components/address";
+@import "../components/blockquote";
+@import "../components/scrolltop";
+@import "../components/sociallink";
+@import "../components/well";
+
+//
+// Plugins
+//
+@import "../plugins/cookieconsent";
+@import "../plugins/photoswipe";

@@ -44,6 +44,7 @@
 
 plugin.bootstrap_package {
     settings {
+        scss <
         scss {
 
             # cat=bootstrap 4.x: styling/300/white; type=string; label=$white:

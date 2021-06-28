@@ -1,0 +1,12 @@
+#####################
+### BOOTSTRAP 5.x ###
+#####################
+
+plugin.bootstrap_package {
+    settings {
+        scss <
+        scss {
+
+        }
+    }
+}
