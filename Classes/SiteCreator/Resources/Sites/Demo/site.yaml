@@ -1,0 +1,557 @@
+sitecreator:
+  title: "Demo"
+  description: ""
+  pages:
+    -
+      id: "NEW_PAGEROOT"
+      title: "Boostrap Package - Demo"
+      is_siteroot: 1
+      abstract: "Bootstrap Package is the most advanced theme for TYPO3."
+      description: "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework. The goal of this package is to give an advanced example of how modern templating in TYPO3 CMS can be handled nicely without depending on third party extensions. Bootstrap Package comes with a fully configurable Frontend via TypoScript. This includes the TypoScript Constant Editor."
+      backend_layout: pagets__default
+      backend_layout_next_level: pagets__default
+      templates:
+        -
+          title: "+root"
+          root: 1
+          clear: 3
+          constants: "
+            page.theme.meta.enable = 1\n
+            page.theme.meta.navigationType = directory\n
+            page.theme.meta.navigationValue = NEW_PAGEFOOTER\n
+            \n
+            page.theme.socialmedia.channels.twitter.url = https://twitter.com/benjaminkott\n
+            page.theme.socialmedia.channels.github.url = https://github.com/benjaminkott/bootstrap_package\n
+            \n
+            page.theme.cookieconsent.position = bottom-right\n
+          "
+          include_static_file: "
+            EXT:bootstrap_package/Configuration/TypoScript
+          "
+      contentBlocks:
+        -
+          CType: carousel
+          frame_class: none
+          tx_bootstrappackage_carousel_item:
+            -
+              header: "Bootstrap Package delivers a full configured theme for TYPO3, based on the Bootstrap CSS Framework."
+            -
+              header: "Yes, Cool!"
+        -
+          CType: icon_group
+          header_layout: 100
+          pi_flexform:
+            data:
+              sDEF:
+                lDEF:
+                  align:
+                    vDEF: left
+                  columns:
+                    vDEF: 3
+                  icon_position:
+                    vDEF: left-top
+          background_color_class: primary
+          tx_bootstrappackage_icon_group_item:
+            -
+              header: "Start browsing"
+              bodytext: "
+                <p>Start browsing to learn why TYPO3 CMS is the most powerful open source content management system.</p>
+                <p><a class=\"btn btn-default\" href=\"t3://page?uid=NEW_PAGEFEATURES\">Features</a>&nbsp;<a class=\"btn btn-default\" href=\"t3://page?uid=NEW_PAGECUSTOMIZING\">Customizing</a></p>
+              "
+            -
+              header: "Examples"
+              bodytext: "
+                <p>Don't hesitate and discover the&nbsp;large selection of our pre-configured page layouts and content elements.</p>
+                <p><a class=\"btn btn-default\" href=\"t3://page?uid=NEW_PAGEPAGES\">Pages</a>&nbsp;<a class=\"btn btn-default\" href=\"t3://page?uid=NEW_PAGECONTENTELEMENTS\">Content Elements</a></p>
+              "
+            -
+              header: "Start browsing"
+              bodytext: "
+                <p>The TYPO3 Bootstrap Package is open source. It's hosted, developed, and maintained on GitHub.</p>
+                <p><a class=\"btn btn-default\" href=\"https://github.com/benjaminkott/bootstrap_package\" rel=\"noopener\" target=\"_blank\" title=\"btn-primary\">View the GitHub project</a></p>
+              "
+        -
+          header: "Unlimited Opportunities"
+          CType: textpic
+          header_layout: 2
+          bodytext: "
+            <p>
+              The Bootstrap Package closes the gap between content management systems and the usual&nbsp;website-builder solution,
+              by providing sophisticated enterprise content management through TYPO3 and the flexibility of a modern website builder.
+            </p>
+            <p>
+              Extensive configuration options allow you to adapt the theme completely to your own needs. A sophisticated system of
+              additional page layouts and content elements in conjunction with extended setting options for background colors and
+              background images no longer sets any limits to the design options for their content.
+            </p>
+          "
+        -
+          header: "Get the TYPO3 Bootstrap Package today."
+          header_layout: 2
+          header_position: center
+          bodytext: "
+            <p class=\"lead text-center\">
+              <strong>The TYPO3 Bootstrap Package is the most comprehensive theme available for TYPO3.</strong>
+              It uses only best practices recommended by the TYPO3 core team and
+              is therefore always state-of-the-art and compatible with all current versions.
+            </p>
+          "
+          background_color_class: light
+      pages:
+        -
+          doktype: 4
+          title: "Home"
+          shortcut: "NEW_PAGEROOT"
+          shortcutMode: 0
+        -
+          id: "NEW_PAGECUSTOMIZING"
+          doktype: 199
+          title: "Spacer"
+        -
+          title: "Customizings"
+        -
+          id: "NEW_PAGEFEATURES"
+          title: "Features"
+        -
+          id: "NEW_PAGEPAGES"
+          title: "Pages"
+          pages:
+            -
+              title: "Default"
+            -
+              title: "2 Columns"
+            -
+              title: "2 Columns 25/75"
+            -
+              title: "2 Columns 50/50"
+            -
+              title: "2 Columns, Offset Right"
+            -
+              title: "3 Columns"
+            -
+              title: "Simple"
+            -
+              title: "Subnavigation, Left"
+            -
+              title: "Subnavigation, Left and 2 Columns"
+            -
+              title: "Subnavigation, Right"
+            -
+              title: "Subnavigation, Right and 2 Columns"
+            -
+              title: "Feature"
+            -
+              title: "Startpage"
+        -
+          id: "NEW_PAGECONTENTELEMENTS"
+          title: "Content Examples"
+          backend_layout: pagets__subnavigation_right
+          backend_layout_next_level: pagets__subnavigation_right
+          pages:
+            -
+              title: "Text"
+              pages:
+                -
+                  id: "NEW_PAGERICHTEXT"
+                  title: "Rich Text"
+                  contentBlocks:
+                    -
+                      header: "TYPO3's Built-in Rich Text Editor"
+                      bodytext: "
+                        <p class=\"lead\">
+                          TYPO3 ships with the CKEditor (<a href=\"http://ckeditor.com/\">ckeditor.com</a>) as there
+                          <strong><em>sophisticated</em></strong>&nbsp;built-in rich text editor (RTE).&nbsp;This editor contains all
+                          of the features one would expect from an Enterprise CMS, and is highly configurable and extendable to fit
+                          every project out there.
+                        </p>
+                      "
+                    -
+                      header: "Multicolumn"
+                      bodytext: "
+                        <div class=\"text-column\">
+                          <p>
+                            Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Etiam rhoncus. Vestibulum ullamcorper
+                            mauris at ligula. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Praesent porttitor,
+                            nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.Quisque id mi.&nbsp;Nullam
+                            quis ante.&nbsp; In ac felis quis tortor malesuada pretium.Nulla facilisi. Donec posuere vulputate arcu. Nunc
+                            nulla. Quisque ut nisi. Ut id nisl quis enim dignissim sagittis.Phasellus viverra nulla ut metus varius
+                            laoreet. Donec mi odio, faucibus at.
+                          </p>
+                        </div>
+                      "
+                    -
+                      header: "Boxed Content"
+                      bodytext: "
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi.</p>
+                        <div class=\"well\">
+                          <p>Nullam cursus lacinia erat. In auctor lobortis lacus. Vivamus consectetuer hendrerit lacus. Pellentesque commodo eros a enim. Suspendisse feugiat.</p>
+                        </div>
+                        <p>Praesent vestibulum dapibus nibh. Fusce fermentum. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.</p>
+                      "
+                    -
+                      header: "Indented Blocks"
+                      bodytext: "
+                        <p>Curabitur nisi. Ut tincidunt tincidunt erat. Nullam sagittis. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Sed fringilla mauris sit amet nibh.</p>
+                        <div class=\"text-indent\">
+                        <p>Phasellus dolor. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Donec vitae sapien ut libero venenatis faucibus. In hac habitasse platea dictumst. Ut non enim eleifend felis pretium feugiat.Phasellus a est. Vestibulum volutpat pretium libero. Duis leo. Cras non dolor. Nullam dictum felis eu pede mollis pretium.</p>
+                        </div>
+                        <p>Integer tincidunt. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Phasellus accumsan cursus velit. Fusce fermentum. Nullam accumsan lorem in dui.</p>
+                      "
+                    -
+                      header: "Buttons"
+                      bodytext: "
+                        <ul class=\"list-inline\">
+                          <li><a class=\"btn btn-default\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Default</a></li>
+                          <li><a class=\"btn btn-primary\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Primary</a></li>
+                          <li><a class=\"btn btn-secondary\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Secondary</a></li>
+                          <li><a class=\"btn btn-info\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Info</a></li>
+                          <li><a class=\"btn btn-warning\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Warning</a></li>
+                          <li><a class=\"btn btn-success\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Success</a></li>
+                          <li><a class=\"btn btn-danger\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Danger</a></li>
+                        </ul>
+                        <ul class=\"list-inline\">
+                          <li><a class=\"btn btn-outline-default\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Default</a></li>
+                          <li><a class=\"btn btn-outline-primary\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Primary</a></li>
+                          <li><a class=\"btn btn-outline-secondary\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Secondary</a></li>
+                          <li><a class=\"btn btn-outline-info\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Info</a></li>
+                          <li><a class=\"btn btn-outline-warning\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Warning</a></li>
+                          <li><a class=\"btn btn-outline-success\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Success</a></li>
+                          <li><a class=\"btn btn-outline-danger\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Danger</a></li>
+                        </ul>
+                      "
+                    -
+                      header: "Contextual Styling"
+                      bodytext: "
+                        <ul class=\"list-inline\">
+                          <li><span class=\"text-muted\">Muted</span></li>
+                          <li><span class=\"text-primary\">Primary</span></li>
+                          <li><span class=\"text-secondary\">Secondary</span></li>
+                          <li><span class=\"text-info\">Info</span></li>
+                          <li><span class=\"text-warning\">Warning</span></li>
+                          <li><span class=\"text-success\">Success</span></li>
+                          <li><span class=\"text-danger\">Danger</span></li>
+                        </ul>
+                      "
+                    -
+                      header: "Examples of Rich Text Content Elements"
+                      bodytext: "
+                        <p><strong>Continuous text:</strong> text, optional in <strong>bold</strong> or <em>italic</em> or in a combination of<em><strong> bold and italic</strong></em>.</p>
+                        <p><strong>Special characters can be used</strong>: @ © ® ¢ ¼ ½ ¾ § ± a² m³ Ω π µ γ β α H<sub>2</sub>O</p>
+                        <p><strong>Texts in foreign languages can be mixed on one page. </strong><br>The font has to be installed on the device though:</p>
+                        <p>
+                          cyrillic: Русская версия<br />
+                          chinese: 中文版<br />
+                          arabic: الْعَرَبيّة
+                        </p>
+                        <p class=\"text-center\">Centered text</p>
+                        <p class=\"text-right\">Text justified right</p>
+                      "
+                    -
+                      header: "Blockquote"
+                      bodytext: "
+                        <p>Aenean ante elit, elementum et, varius ut, condimentum ut, sem. Aenean ante neque, imperdiet sed, ultricies vitae, aliquam dictum, arcu. Aenean arcu est, semper vitae, euismod quis, vehicula eu, risus.</p>
+                        <blockquote>
+                          <p>Aenean ante elit, elementum et, varius ut, condimentum ut, sem. Aenean ante neque, imperdiet sed, ultricies vitae, aliquam dictum, arcu. Aenean arcu est, semper vitae, euismod quis, vehicula eu, risus.</p>
+                        </blockquote>
+                        <p>Aenean ante elit, elementum et, varius ut, condimentum ut, sem. Aenean ante neque, imperdiet sed, ultricies vitae, aliquam dictum, arcu. Aenean arcu est, semper vitae, euismod quis, vehicula eu, risus.</p>
+                      "
+                    -
+                      header: "Lists"
+                      bodytext: "
+                        <p><strong>Bulleted list:</strong></p>
+                        <ul>
+                          <li>first level</li>
+                          <li>first level
+                            <ul>
+                              <li>second level</li>
+                              <li>second level
+                                <ul>
+                                  <li>third level</li>
+                                  <li>third level</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <p><strong>Ordered list:</strong></p>
+                        <ol>
+                          <li>first level</li>
+                          <li>first level
+                            <ol>
+                              <li>second level</li>
+                              <li>second level
+                                <ol>
+                                  <li>third level</li>
+                                  <li>third level</li>
+                                </ol>
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      "
+                    -
+                      header: "Links"
+                      bodytext: "
+                        <p>You can insert <a class=\"link-page\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">internal links</a> (links to pages within the website), <a class=\"link-external\" href=\"http://typo3.org\">external links</a> (links to external sites) or <a class=\"link-mail\" href=\"mailto:test@test.net\">e-mail links</a> (links that open the user's email client when clicked).</p>
+                        <p>Additional link stylings:</p>
+                        <ul>
+                          <li><a class=\"link-arrow\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Arrow</a></li>
+                          <li><a class=\"link-page\" href=\"t3://page?uid=NEW_PAGERICHTEXT\">Page</a></li>
+                          <li><a class=\"link-file\" href=\"#\">File</a></li>
+                          <li><a class=\"link-folder\" href=\"#\">Folder</a></li>
+                          <li><a class=\"link-mail\" href=\"mailto:john.doe@example.com\">E-Mail&nbsp;</a></li>
+                        </ul>
+                      "
+                    -
+                      header: "Tables"
+                      bodytext: "
+                        <table class=\"table table-bordered table-hover\">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>FirstName</th>
+                              <th>LastName</th>
+                              <th>Username</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class=\"success\">
+                              <td>1</td>
+                              <td>Benjamin</td>
+                              <td>Kott</td>
+                              <td>@benjaminkott</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>John</td>
+                              <td>Doe</td>
+                              <td>-</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Larry</td>
+                              <td>the Bird</td>
+                              <td>@twitter</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      "
+                    -
+                      header: "Address"
+                      bodytext: "
+                        <address class=\"address\">
+                          <p class=\"address-title\"><strong>John Doe</strong></p>
+                          <p class=\"address-address\">Street<br>Zip &amp; City</p>
+                          <p class=\"address-phone\">+49 1234 456-7890</p>
+                          <p class=\"address-fax\">+49 1234 456-7891</p>
+                          <p class=\"address-email\">john.doe@example.com</p>
+                          <p class=\"address-www\">www.example.com</p>
+                        </address>
+                      "
+                -
+                  title: "Headers"
+                -
+                  title: "Bullet List"
+                -
+                  title: "Text with Teaser"
+                -
+                  title: "Text and Icon"
+                -
+                  title: "Text in Columns"
+                -
+                  title: "List Group"
+                -
+                  title: "Panel"
+                -
+                  title: "Table"
+                -
+                  title: "Quote"
+                  contentBlocks:
+                    -
+                      header: "Quote"
+                      bodytext: "<p class=\"lead\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus turpis nisi, eleifend laoreet ipsum rutrum eu. Vivamus lorem tellus, fermentum eu vulputate vitae, facilisis ut metus.&nbsp;</p>"
+                    -
+                      header: "W3C HTML5 specification"
+                      CType: quote
+                      quote_source: "W3C HTML5 specification"
+                      quote_link: "http://w3c.github.io/html/grouping-content.html#the-blockquote-element"
+                      bodytext: "The blockquote element represents a section that is quoted from another source."
+            -
+              title: "Media"
+              pages:
+                -
+                  title: "Audio"
+                -
+                  title: "Card Group"
+                -
+                  title: "Icon Group"
+                -
+                  title: "Gallery"
+                -
+                  title: "Text and Images"
+                -
+                  title: "Text and Media"
+                -
+                  title: "File downloads"
+                -
+                  title: "Images"
+                -
+                  title: "Media"
+                -
+                  title: "External Media"
+            -
+              title: "Interactive"
+              pages:
+                -
+                  title: "Accordion"
+                -
+                  title: "Carousel"
+                -
+                  title: "Tab"
+                -
+                  title: "Timeline"
+            -
+              title: "Social Media"
+              pages:
+                -
+                  title: "Social Links"
+                  contentBlocks:
+                    -
+                      header: "Social Links"
+                      CType: social_links
+            -
+              title: "Form elements"
+              pages:
+                -
+                  title: "Forms"
+                  pages:
+                    -
+                      title: "Thank You"
+                -
+                  title: "Login"
+                -
+                  title: "Search"
+            -
+              title: "Menu's"
+              pages:
+            -
+              title: "Special elements"
+              pages:
+            -
+              title: "And more..."
+              pages:
+                -
+                  title: "Frames"
+                  contentBlocks:
+                    -
+                      header: "Content-specific Layouts"
+                      frame_class: ruler-after
+                      space_after_class: medium
+                      bodytext: "
+                        <p class=\"lead\">
+                          Frames are centrally configured layouts for different content elements.
+                          Frames can be used, for example, to allow a content editor to apply a
+                          specific background image and/or color to specific content elements
+                          throughout the website.
+                        </p>
+                      "
+                    -
+                      header: "Ruler before"
+                      frame_class: ruler-before
+                      bodytext: "<p>You can set a rulers before or after each content element.</p>"
+                    -
+                      header: "Ruler after"
+                      frame_class: ruler-after
+                      space_after_class: medium
+                      bodytext: "<p>Here the ruler is positioned after the element.</p>"
+                    -
+                      header: "Ruler after coloured"
+                      frame_class: ruler-after
+                      background_color_class: "primary"
+                      bodytext: "<p>Here the ruler is positioned after the element.</p>"
+                    -
+                      header: "Ruler before coloured"
+                      background_color_class: primary
+                      bodytext: "<p>You can set a rulers before or after each content element.</p>"
+                    -
+                      header: "Indent"
+                      frame_class: indent
+                      bodytext: "<p>Donec volutpat pulvinar enim tincidunt sagittis. Duis rutrum enim leo. Maecenas euismod congue blandit? Aliquam et auctor sapien. Phasellus ut pellentesque tellus. Sed ac libero vitae quam porttitor viverra. Nullam neque libero, luctus suscipit ultricies in, tincidunt ac justo?</p>"
+                    -
+                      header: "Indent left"
+                      frame_class: indent-left
+                      bodytext: "<p>Donec volutpat pulvinar enim tincidunt sagittis. Duis rutrum enim leo. Maecenas euismod congue blandit? Aliquam et auctor sapien. Phasellus ut pellentesque tellus. Sed ac libero vitae quam porttitor viverra. Nullam neque libero, luctus suscipit ultricies in, tincidunt ac justo?</p>"
+                    -
+                      header: "Indent right"
+                      frame_class: indent-right
+                      bodytext: "<p>Donec volutpat pulvinar enim tincidunt sagittis. Duis rutrum enim leo. Maecenas euismod congue blandit? Aliquam et auctor sapien. Phasellus ut pellentesque tellus. Sed ac libero vitae quam porttitor viverra. Nullam neque libero, luctus suscipit ultricies in, tincidunt ac justo?</p>"
+                    -
+                      header: "Coloured Backgrounds (light)"
+                      background_color_class: light
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (dark)"
+                      background_color_class: dark
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (primary)"
+                      background_color_class: primary
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "If the same backgrounds follow each other, the distance between the elements is reduced."
+                      background_color_class: primary
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (secondary)"
+                      background_color_class: secondary
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (light)"
+                      frame_layout: embedded
+                      background_color_class: light
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (dark)"
+                      frame_layout: embedded
+                      background_color_class: dark
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (primary)"
+                      frame_layout: embedded
+                      background_color_class: primary
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                    -
+                      header: "Coloured Backgrounds (secondary)"
+                      frame_layout: embedded
+                      background_color_class: secondary
+                      bodytext: "<p>Duis luctus, enim commodo auctor sodales, mi dui facilisis elit, a lobortis quam lacus nec velit. Nam pharetra, augue quis tristique consequat, arcu orci tincidunt dolor, et vehicula nulla risus vel nisi? Maecenas vel ligula lorem. Pellentesque ullamcorper dolor non justo faucibus eleifend. Sed nec sapien vel massa vulputate vehicula eget eu nisl.</p>"
+                -
+                  title: "Images with links"
+                -
+                  title: "Any language, any character"
+        -
+          title: "404"
+          nav_hide: true
+        -
+          id: "NEW_PAGELEGAL"
+          title: "Legal"
+          nav_hide: true
+        -
+          id: "NEW_PAGEPRIVACY"
+          title: "Privacy"
+          nav_hide: true
+        -
+          id: "NEW_PAGEFOOTER"
+          doktype: 254
+          title: "Footer"
+          pages:
+            -
+              doktype: 4
+              title: "Imprint"
+              shortcut: "NEW_PAGELEGAL"
+              shortcut_mode: 0
+            -
+              doktype: 4
+              title: "Privacy"
+              shortcut: "NEW_PAGEPRIVACY"
+              shortcut_mode: 0
